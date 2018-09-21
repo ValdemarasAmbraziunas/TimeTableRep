@@ -1,0 +1,82 @@
+﻿@model TimeTable.Models.ClassRoom
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ClassRoom</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfPlaces)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfPlaces)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsPCavailable)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsPCavailable)
+        </dd>
+        <dd>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.ID })
+        </dd>
+        <dd>
+            @Html.ActionLink("Back to List", "Index")
+        </dd>
+    </dl>
+    <hr />
+</div>
+<p>
+    <div class="container">
+        <div class="row weekday-title">
+            <div class="col-lg-2"></div>
+            @foreach (var day in ViewBag.Days)
+            {
+                <div class="col-lg-1">
+                    @day.Name
+                </div>
+            }
+        </div>
+        @foreach (var time in ViewBag.Times)
+        {
+            <div class="row lecture-time">
+                <div class="col-lg-2">
+                    @time.Start - @time.End
+                </div>
+                @foreach (var lecture in ViewBag.Lectures)
+                {
+                    if (lecture.LectureTimeID == time.ID && lecture.ClassRoom.ID == Model.ID)
+                    {
+                        <div class="col-lg-1 lecture" data-id="@lecture.ID">
+                            <div>
+                                @Html.ActionLink(string.Join(" ", (string)lecture.Subject.Name, (string)lecture.Teacher.FirstName,
+                                    (string)lecture.Group.Name, (string)lecture.ClassRoom.Name), "Details", "Lectures", new { id = lecture.ID }, new { })
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        }
+    </div>
+</p>

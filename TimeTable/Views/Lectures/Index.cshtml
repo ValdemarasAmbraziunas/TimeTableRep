@@ -1,0 +1,98 @@
+﻿@model IEnumerable<TimeTable.Models.Lecture>
+
+@{
+    ViewBag.Title = "List of all lectures";
+}
+
+@if (ViewBag.Error != null)
+{
+    <h3 style="color:red">@ViewBag.Error</h3>
+}
+
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<p>
+    @using (Html.BeginForm("GenerateTable", "Lectures"))
+    {
+        @Html.AntiForgeryToken()
+        <button type="submit" class="btn btn-success">Generate table</button>
+    }
+    
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TeacherID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GroupID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClassRoomID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LectureTimeID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WeekdayID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubjectID)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsPcRequired)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink(string.Join(" ", item.Teacher.FirstName, item.Teacher.LastName), "Details", "Teachers", new { id = item.TeacherID }, new { })
+        </td>
+        <td>
+            @Html.ActionLink(item.Group.Name, "Details", "Groups", new { id = item.GroupID }, new { })
+        </td>
+        <td>
+            @Html.ActionLink(item.ClassRoom.Name, "Details", "ClassRooms", new { id = item.ClassRoomID }, new { })
+        </td>
+        <td>
+            @if (item.LectureTime != null)
+            {
+                @Html.ActionLink(string.Join(" - ", item.LectureTime.Start.ToString(@"hh\:mm"),
+                item.LectureTime.End.ToString(@"hh\:mm")), "Details", "LectureTimes", new { id = item.LectureTimeID }, new { })
+            }
+        </td>
+        <td>
+            @if (item.Weekday != null)
+            {
+                @Html.ActionLink(item.Weekday.Name, "Details", "Weekdays", new { id = item.WeekdayID }, new { })
+            }
+        </td>
+        <td>
+            @Html.ActionLink(item.Subject.Name, "Details", "Subjects", new { id = item.SubjectID }, new { })
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsPcRequired)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
+

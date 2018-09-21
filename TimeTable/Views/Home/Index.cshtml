@@ -1,0 +1,66 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div class="container">
+    @if (User.Identity.IsAuthenticated)
+    {
+        <div class="btn editmode">EditMode</div>
+        <div class="inline-block hidden changes-panel">
+            <label>Redaguojama paskaita</label>
+            <div id="currentLecture" class="indicator" ></div>
+            <label>Keisti dėstytoją</label>
+            <input type="checkbox" id="swapLecturer"/>
+            <label>Keisti Auditoriją</label>
+            <input type="checkbox" id="swapRoom"/>
+            <select id="available-lectures" class="hidden">
+            </select>
+            <div class="btn" id="getChangesButton">Gauti galimus keitimus</div>
+            <div class="btn hidden" id="changeButton">Sukeisti</div>
+        </div>
+    }
+    <div>
+        <div class="schedule">
+            @foreach (var day in ViewBag.Days)
+            {
+                <div class="row weekday-title">
+                    <div class="col-lg-12">
+                        <h2>@day.Name</h2>
+                    </div>
+                </div>
+
+                foreach (var time in ViewBag.Times)
+                {
+                    <div class="row lecture-time" data-id="@time.ID" data-weekday-id="@day.ID">
+                        <div class="col-lg-2">
+                            @time.Start - @time.End
+                        </div>
+                        @foreach (var lecture in ViewBag.Lectures)
+                        {
+                            if (lecture.LectureTimeID == time.ID && lecture.WeekdayID == day.ID)
+                            {
+                                <div class="col-lg-1 lecture" data-id="@lecture.ID">
+                                    <div>
+                                        @Html.ActionLink(string.Join(" ", (string) lecture.Subject.Name, (string) lecture.Teacher.FirstName,
+                                            (string) lecture.Group.Name, (string) lecture.ClassRoom.Name), "Details", "Lectures", new {id = lecture.ID}, new {})
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
+                }
+            }
+        </div>
+        @if (User.Identity.IsAuthenticated)
+        {
+            <div class="console-div">
+                <div class="btn console-button">Show console</div>
+                <div class="console-content hidden">
+                    <ul class="log"></ul>
+                </div>
+            </div>
+        }
+        
+    </div>
+</div>

@@ -1,0 +1,37 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+# OS junk files
+[Tt]humbs.db
+
+# Build output
+/builds/**
+bin/
+Cassette/
+gulp-tsc-tmp*
+
+# Visual Studio files
+obj/
+*.suo
+*.csproj.user
+*.DotSettings.user
+Settings.settings
+Settings.Designer.cs
+
+# NuGet
+/sources/.nuget/nuget.exe
+/sources/packages/**
+
+# Tooling
+_ReSharper*/
+*.resharper
+*.ncrunch*
+*.crunchsolution.cache
+/.project
+*/node_modules
+
+# Temporary
+tmp/
+*.dmp
+
+.vs
+
+/TimeTable/local.connection.config

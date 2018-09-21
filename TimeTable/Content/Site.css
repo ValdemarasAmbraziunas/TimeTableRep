@@ -1,0 +1,83 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.container {
+    max-width: 100%;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.weekday-title {
+    background-color: #F5BCA9;
+}
+
+.lecture-time {
+    background-color: #F6D8CE;
+    border:1px solid #F8E6E0;
+}
+.clicked {
+    background: cyan;
+}
+
+.console-div{
+    margin-left:20px;
+    padding:10px;
+    text-align:center;
+    border:1px solid blue;
+    background-color:azure;
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.console-button{
+    background-color:lavender;
+}
+
+.schedule {
+    width: 70%;
+    display: inline-block;
+}
+
+.console-content .log{
+    text-align: left;
+    height: 80vh;
+    overflow-y: scroll;
+}
+.weekday-title.editmode{
+    background-color: #8181F7;
+}
+.lecture-time.editmode{
+    background-color: #CECEF6;
+}
+
+.inline-block {
+    display: inline-block;
+}
+.btn.undo {
+    background-color: aquamarine;
+}
+.indicator {
+    display: inline-block;
+    border: 1px solid red;
+    min-width: 12px;
+}

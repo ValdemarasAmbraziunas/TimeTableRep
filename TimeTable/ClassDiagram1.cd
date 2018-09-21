@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TimeTable.Controllers.BaseController" Collapsed="true">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\BaseController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TimeTable.Controllers.ClassRoomsController" Collapsed="true">
+    <Position X="3.5" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACABAACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\ClassRoomsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TimeTable.Controllers.GroupsController" Collapsed="true">
+    <Position X="8.5" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACABAACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\GroupsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TimeTable.Controllers.HomeController" Collapsed="true">
+    <Position X="8.5" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\HomeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TimeTable.Controllers.LecturesController" Collapsed="true">
+    <Position X="3.5" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAKAAAAACABBACAAAAAAIAAAAEAAEACAAECAAAAACQ=</HashCode>
+      <FileName>Controllers\LecturesController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TimeTable.Controllers.LectureTimesController" Collapsed="true">
+    <Position X="3.5" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACABAACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\LectureTimesController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TimeTable.Controllers.LogController" Collapsed="true">
+    <Position X="8.5" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACABAACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\LogController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TimeTable.Controllers.SubjectsController" Collapsed="true">
+    <Position X="8.5" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACABAACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\SubjectsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TimeTable.Controllers.TeachersController" Collapsed="true">
+    <Position X="3.5" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACABAACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\TeachersController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TimeTable.Controllers.WeekdaysController" Collapsed="true">
+    <Position X="6" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACABAACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\WeekdaysController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TimeTable.Data.TimeTableContext" Collapsed="true">
+    <Position X="3.5" Y="9" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAQAAAAAAgAAEBAAAAAEAAAAAAAAQABAgACAAA=</HashCode>
+      <FileName>Data\TimeTableContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TimeTable.Extensions.SelectListExtensions" Collapsed="true">
+    <Position X="6" Y="9" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Extensions\SelectListExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TimeTable.Models.ClassRoom" Collapsed="true">
+    <Position X="3.5" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAgAAAAABAAAQAAAAABAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Models\ClassRoom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TimeTable.Models.Group" Collapsed="true">
+    <Position X="6" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAABAAAQAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Models\Group.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TimeTable.Models.Lecture" Collapsed="true">
+    <Position X="8.5" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AgUAAEAAEAkAgAAEAIAACAgAAAAAABEAAQAAAAACAAA=</HashCode>
+      <FileName>Models\Lecture.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TimeTable.Models.LectureTime" Collapsed="true">
+    <Position X="3.5" Y="6.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAACAAgAAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\LectureTime.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TimeTable.Models.Log" Collapsed="true">
+    <Position X="6" Y="6.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAUAIAAACAAAgiAAAAQAAAAAAQAAEAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Models\Log.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TimeTable.Models.Subject" Collapsed="true">
+    <Position X="8.5" Y="6.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAABgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Subject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TimeTable.Models.Teacher" Collapsed="true">
+    <Position X="3.5" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAgAAAAABAAAAAAAAAAAAAAAAACAAAAAg=</HashCode>
+      <FileName>Models\Teacher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TimeTable.Models.TimeSchedule" Collapsed="true">
+    <Position X="6" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAgIAAAgAAAAAAAEACAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Models\TimeSchedule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TimeTable.Models.Weekday" Collapsed="true">
+    <Position X="8.5" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAABAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Weekday.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TimeTable.Services.GenerateService" Collapsed="true">
+    <Position X="5.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACQAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Services\GenerateService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TimeTable.Services.SwapService" Collapsed="true">
+    <Position X="7" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACABAAAAIwBAAAQAAAAAAAAEAAAAAQAAAAAAAABAQ=</HashCode>
+      <FileName>Services\SwapService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TimeTable.ViewModels.LectureViewModel" Collapsed="true">
+    <Position X="8.5" Y="9" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AgQAAEAAEAkAgAgAAEAACAAAAAAAAAAAAQABAgACAAA=</HashCode>
+      <FileName>ViewModels\LectureViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
